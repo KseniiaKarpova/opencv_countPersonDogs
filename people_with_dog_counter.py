@@ -160,7 +160,7 @@ while True:
 		boxes_for_traker = []
 		tmp_by_dog = []
 		if len(idxs) > 0:
-			if args["countDogs"] and ( 8 <= currentTime.hour <10):
+			if args["countDogs"] and ( 8 <= currentTime.hour <10) and (currentTime.weekday()<5):
 				for i in idxs.flatten():
 					# extract the bounding box coordinates
 					(x, y) = (boxes[i][0], boxes[i][1])
